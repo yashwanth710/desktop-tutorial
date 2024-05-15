@@ -7,6 +7,6 @@ preprocessed_data['VALUETEXT'] = preprocessed_data['VALUETEXT'].replace({'NIL': 
 preprocessed_data['TESTTYPE'] = "RoutineTest"
 preprocessed_data['SAMPLEDATE'] = pd.to_datetime(preprocessed_data['SAMPLEDATE'])
 preprocessed_data['TESTINGDATE'] = pd.to_datetime(preprocessed_data['TESTINGDATE'])
-# Maintaing the template column order 
-cols = ['SNO','ASSETNAME','TAGNAME','DISPLAYNAME', 'UOM','VALUETEXT', 'TESTMETHOD','SUBSYSTEM','TESTTYPE','SAMPLEDATE', 
-        'TESTINGDATE', 'SAMPLEDBY', 'POSITION','POSITION(OTHER)','TESTEDBY','SAMPLINGMETHOD','REASONOFSAMPLING',
+
+
+print('hi hello rmes ')
