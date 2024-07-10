@@ -95,8 +95,9 @@ def table_extraction(pdf_path, relevant_pages):
     ocr = TesseractOCR(lang="eng")
     pdf_tables = pdf.extract_tables(ocr=ocr)
     tables = []
-    for page in relevant_pages:
-        for table in pdf_tables[page]:
-            tables.append(table.df)  
-    return tables
+    for page_number in relevant_pages:
+        for table in pdf_tables[page_number]:
+            tables.append(table.df)
+        return tables
+            
 

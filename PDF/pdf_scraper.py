@@ -9,6 +9,8 @@ import json
 import pandas as pd
 import fitz
 
+client = OpenAI(api_key='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')
+
 
 def is_relevant(text, prompt, client):
     
@@ -49,9 +51,9 @@ chat_llm = ChatOpenAI(model="gpt-4o", api_key=os.getenv("OPENAI_API_KEY"))
 def model_data(data):    
     # Initialize the OpenAI GPT-4 model for chat
     chat_llm = ChatOpenAI(model="gpt-4o", api_key=os.getenv("OPENAI_API_KEY"))
-    query = prompts['model queries']['DGA']
+    query = prompts['model_queries']['Turns Ratio']['Winding Resistance']['Insulation Resistance']
     # Combine the query and document content
-    combined_query = query + "\n\nDocument Content:\n" + data
+    combined_query = query + "\n\nDocument Content:\n" + '\n'.join(data)
     start_time = datetime.now()
 
     # Generate a completion
