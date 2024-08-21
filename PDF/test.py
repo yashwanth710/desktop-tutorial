@@ -278,6 +278,35 @@
     }
 }
 
+###############################################
+
+
+relevant_pages = {'pages queries': {"DGA": """Analyze the following text and determine if it mentions any information related to oil properties, 
+    DGA gases, or Furan values. Specifically, look for the presence of the following parameters: Appearance, 
+    Density at 29.5 °C, Breakdown Voltage, Water Content, Neutralisation Value, Resistivity @27°C, Resistivity @90°C,
+    Dielectric Disipation Factor @27°C, Dielectric Disipation Factor @90°C, Interfacial Tension, Flash Point, 
+    Sediment & Sludge, TGC Total Gas Content %, Hydrogen (H2), Oxygen (O2), Nitrogen (N2), Carbon monoxide (CO), 
+    Carbon dioxide (CO2), Methane (CH4), Ethane (C2H6), Ethylene (C2H4), Acetylene (C2H2), 
+    Total Dissolved Combustible Gas (TDCG), TDCG/TGC ( %), 5-Hydroxymethyl-2-furuldehyde, 2-Furfurol (furfuryl alcohol),
+    2-Furaldehyde, 2-Acetylfuran, 5-Methyl-2-furaldehyde, Total Furans, Estimated DP Value. 
+    If any of these parameters are present, respond 'Yes'; otherwise, respond 'No'.""" ,
+    
+    "Turns Ratio": """Analyze the following text and determine if it mentions any information related to the Turns Ratio test. 
+    Specifically, look for the presence of tabular data for the following parameters: Test Connection, 15sec, 1min, 10min, PI values. 
+    If any of these parameters are present, respond 'Yes'; otherwise, respond 'No'.""",
+    
+    "Winding Resistance": """Analyze the following text and determine if it mentions any information related to 
+    the Winding Resistance test. Specifically, look for the presence of tabular data for the 
+    following parameters: HV Side Winding Resistance, LV Side Winding Resistance. 
+    If any of these parameters are present, respond 'Yes'; otherwise, respond 'No'.""",
+    
+    "Insulation Resistance": """Analyze the following text and determine if it mentions any information 
+    related to the Insulation Resistance test. Specifically, look for the presence of tabular data for the 
+    following parameters: Test Connection, 15sec, 1min, 10min, PI values. 
+    If any of these parameters are present, respond 'Yes'; otherwise, respond 'No'."""}}
+
+
+
 
 {
 "llm_model_prompts": {
