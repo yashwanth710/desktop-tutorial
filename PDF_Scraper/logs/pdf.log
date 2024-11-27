@@ -1,0 +1,189 @@
+*** Starting uWSGI 2.0.28 (64bit) on [Tue Nov 26 09:27:28 2024] ***
+compiled with version: 12.2.0 on 26 November 2024 07:55:41
+os: Linux-5.15.153.1-microsoft-standard-WSL2 #1 SMP Fri Mar 29 23:14:13 UTC 2024
+nodename: 8b47c5903218
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/src
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5101 fd 4
+spawned uWSGI http 1 (pid: 7)
+uwsgi socket 0 bound to TCP address 127.0.0.1:33007 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.11.10 (main, Nov 12 2024, 02:25:24) [GCC 12.2.0]
+Python main interpreter initialized at 0x7f1362a0b658
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218976 bytes (213 KB) for 4 cores
+*** Operational MODE: threaded ***
+ERROR:root:Connection failed: [Errno 101] Network is unreachable
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x7f1362a0b658 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 1, cores: 4)
+[pid: 1|app: 0|req: 1/1] 172.18.0.1 () {40 vars in 569 bytes} [Tue Nov 26 09:28:33 2024] POST /pdf/intiate_pdf_processing => generated 61 bytes in 1 msecs (HTTP/1.1 400) 2 headers in 80 bytes (1 switches on core 0)
+intiating pdf_processing
+Extracting text from PDF...
+[pid: 1|app: 0|req: 2/2] 172.18.0.1 () {40 vars in 568 bytes} [Tue Nov 26 09:28:47 2024] POST /pdf/intiate_pdf_processing => generated 64 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 71 bytes (1 switches on core 1)
+Downloading https://github.com/felixdittrich92/OnnxTR/releases/download/v0.0.1/db_resnet50-69ba0015.onnx to /root/.cache/onnxtr/models/db_resnet50-69ba0015.onnx
+  0%|          | 0/100919029 [00:00<?, ?it/s]  2%|▏         | 1610752/100919029 [00:00<00:06, 15887385.43it/s]  4%|▍         | 4101120/100919029 [00:00<00:04, 21152221.84it/s]  6%|▌         | 6219776/100919029 [00:00<00:06, 14508569.35it/s]  8%|▊         | 7853056/100919029 [00:00<00:06, 13373560.58it/s] 10%|█         | 10208256/100919029 [00:00<00:05, 16229256.97it/s] 12%|█▏        | 11980800/100919029 [00:00<00:05, 15289248.18it/s] 14%|█▎        | 13736960/100919029 [00:00<00:06, 14436570.82it/s] 16%|█▌        | 16367616/100919029 [00:01<00:04, 17532077.25it/s] 18%|█▊        | 18398208/100919029 [00:01<00:04, 18256695.41it/s] 20%|██        | 20622336/100919029 [00:01<00:04, 19199298.98it/s] 22%|██▏       | 22611968/100919029 [00:01<00:04, 17278078.17it/s] 25%|██▍       | 24994816/100919029 [00:01<00:04, 16710206.03it/s] 27%|██▋       | 27747328/100919029 [00:01<00:03, 19408291.17it/s] 30%|██▉       | 29975552/100919029 [00:01<00:03, 20018045.53it/s] 32%|███▏      | 32056320/100919029 [00:01<00:03, 19292554.77it/s] 34%|███▎      | 34041856/100919029 [00:01<00:03, 17228090.06it/s] 36%|███▌      | 35946496/100919029 [00:02<00:03, 17280495.49it/s] 38%|███▊      | 37863424/100919029 [00:02<00:03, 17644751.64it/s] 39%|███▉      | 39666688/100919029 [00:02<00:03, 16439765.73it/s] 41%|████      | 41347072/100919029 [00:02<00:03, 16433586.62it/s] 43%|████▎     | 43055104/100919029 [00:02<00:03, 16344623.23it/s] 44%|████▍     | 44706816/100919029 [00:02<00:03, 16022728.27it/s] 46%|████▌     | 46320640/100919029 [00:02<00:03, 15238375.79it/s] 47%|████▋     | 47904768/100919029 [00:02<00:03, 15393653.01it/s] 49%|████▉     | 49690624/100919029 [00:02<00:03, 15958061.02it/s] 51%|█████     | 51558400/100919029 [00:03<00:02, 16719256.94it/s] 53%|█████▎    | 53459968/100919029 [00:03<00:02, 17242216.04it/s] 55%|█████▍    | 55459840/100919029 [00:03<00:02, 18043331.45it/s] 57%|█████▋    | 57438208/100919029 [00:03<00:02, 18550345.40it/s] 59%|█████▉    | 59305984/100919029 [00:03<00:02, 18403821.76it/s] 61%|██████    | 61157376/100919029 [00:03<00:02, 18389437.57it/s] 62%|██████▏   | 63013888/100919029 [00:03<00:02, 18279719.73it/s] 64%|██████▍   | 64939008/100919029 [00:03<00:01, 18556645.72it/s] 66%|██████▋   | 66987008/100919029 [00:03<00:01, 19101641.51it/s] 68%|██████▊   | 68899840/100919029 [00:03<00:01, 18901877.57it/s] 70%|███████   | 70902784/100919029 [00:04<00:01, 19031558.90it/s] 72%|███████▏  | 72807424/100919029 [00:04<00:01, 17845380.34it/s] 74%|███████▍  | 74606592/100919029 [00:04<00:01, 17010543.94it/s] 76%|███████▌  | 76331008/100919029 [00:04<00:01, 17054125.36it/s] 77%|███████▋  | 78162944/100919029 [00:04<00:01, 17365379.34it/s] 79%|███████▉  | 79908864/100919029 [00:04<00:01, 17222810.86it/s] 81%|████████  | 81942528/100919029 [00:04<00:01, 18093056.33it/s] 83%|████████▎ | 83887104/100919029 [00:04<00:01, 16879854.55it/s] 85%|████████▍ | 85599232/100919029 [00:05<00:01, 13851841.28it/s] 86%|████████▋ | 87132160/100919029 [00:05<00:00, 14211752.46it/s] 88%|████████▊ | 88754176/100919029 [00:05<00:00, 14729782.16it/s] 89%|████████▉ | 90289152/100919029 [00:05<00:00, 14734240.07it/s] 91%|█████████ | 91933696/100919029 [00:05<00:00, 15206005.63it/s] 93%|█████████▎| 93519872/100919029 [00:05<00:00, 15345290.07it/s] 94%|█████████▍| 95278080/100919029 [00:05<00:00, 15943577.37it/s] 96%|█████████▌| 96909312/100919029 [00:05<00:00, 16050252.11it/s] 98%|█████████▊| 98529280/100919029 [00:05<00:00, 15599265.27it/s] 99%|█████████▉| 100165632/100919029 [00:05<00:00, 15746300.44it/s]100919296it [00:05, 16837993.37it/s]                               
+Downloading https://github.com/felixdittrich92/OnnxTR/releases/download/v0.0.1/crnn_vgg16_bn-662979cc.onnx to /root/.cache/onnxtr/models/crnn_vgg16_bn-662979cc.onnx
+  0%|          | 0/63210761 [00:00<?, ?it/s]  2%|▏         | 1073152/63210761 [00:00<00:05, 10523828.70it/s]  5%|▍         | 2967552/63210761 [00:00<00:03, 15248077.73it/s]  9%|▊         | 5408768/63210761 [00:00<00:03, 19130058.69it/s] 12%|█▏        | 7555072/63210761 [00:00<00:02, 19946393.60it/s] 16%|█▌        | 9865216/63210761 [00:00<00:02, 21053829.79it/s] 19%|█▉        | 11971584/63210761 [00:00<00:03, 13033444.66it/s] 22%|██▏       | 13973504/63210761 [00:00<00:03, 14427645.16it/s] 25%|██▌       | 16033792/63210761 [00:00<00:02, 15936130.39it/s] 29%|██▉       | 18181120/63210761 [00:01<00:02, 17302615.75it/s] 32%|███▏      | 20474880/63210761 [00:01<00:02, 18818171.59it/s] 36%|███▌      | 22509568/63210761 [00:01<00:02, 13939099.78it/s] 38%|███▊      | 24310784/63210761 [00:01<00:02, 14842862.88it/s] 42%|████▏     | 26539008/63210761 [00:01<00:02, 16578008.81it/s] 45%|████▌     | 28701696/63210761 [00:01<00:01, 17788564.55it/s] 49%|████▉     | 30929920/63210761 [00:01<00:01, 18790752.16it/s] 52%|█████▏    | 32930816/63210761 [00:02<00:02, 13762354.89it/s] 56%|█████▌    | 35205120/63210761 [00:02<00:01, 15697239.03it/s] 59%|█████▉    | 37326848/63210761 [00:02<00:01, 17012346.52it/s] 62%|██████▏   | 39380992/63210761 [00:02<00:01, 17905687.99it/s] 66%|██████▌   | 41414656/63210761 [00:02<00:01, 18549282.07it/s] 69%|██████▊   | 43395072/63210761 [00:02<00:01, 13764132.21it/s] 72%|███████▏  | 45579264/63210761 [00:02<00:01, 15458927.16it/s] 76%|███████▌  | 48118784/63210761 [00:02<00:00, 17771802.44it/s] 80%|████████  | 50609152/63210761 [00:03<00:00, 19427353.84it/s] 83%|████████▎ | 52730880/63210761 [00:03<00:00, 13788968.71it/s] 88%|████████▊ | 55413760/63210761 [00:03<00:00, 16468073.03it/s] 91%|█████████▏| 57723904/63210761 [00:03<00:00, 17619830.74it/s] 95%|█████████▍| 60034048/63210761 [00:03<00:00, 18943422.33it/s] 99%|█████████▉| 62491648/63210761 [00:03<00:00, 20391717.78it/s]63211520it [00:03, 16211824.95it/s]                              
+finding relevant pages for requested test...
+Extracting Tables from PDF...
+tesseract 5.3.0
+ leptonica-1.82.0
+  libgif 5.2.1 : libjpeg 6b (libjpeg-turbo 2.1.2) : libpng 1.6.39 : libtiff 4.5.0 : zlib 1.2.13 : libwebp 1.2.4 : libopenjp2 2.5.0
+ Found AVX512BW
+ Found AVX512F
+ Found AVX512VNNI
+ Found AVX2
+ Found AVX
+ Found FMA
+ Found SSE4.1
+ Found OpenMP 201511
+ Found libarchive 3.6.2 zlib/1.2.13 liblzma/5.4.1 bz2lib/1.0.8 liblz4/1.9.4 libzstd/1.5.4
+ Found libcurl/7.88.1 OpenSSL/3.0.15 zlib/1.2.13 brotli/1.0.9 zstd/1.5.4 libidn2/2.3.3 libpsl/0.21.2 (+libidn2/2.3.3) libssh2/1.10.0 nghttp2/1.52.0 librtmp/2.3 OpenLDAP/2.5.13
+Merging text and table data
+Processing Tests...........
+Processing Tests...........Oil Testing
+Working on Oil Testing
+Processing Empty Tests...........
+DGA template creation...
+Exception in thread Thread-4 (pdf_processing):
+Traceback (most recent call last):
+  File "/app/src/pdf_app.py", line 74, in pdf_processing
+    result_json = pdf.extract_test_result_json()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pdf_scraper.py", line 359, in extract_test_result_json
+    "test_type_code": i["test_type_code"],
+                      ~^^^^^^^^^^^^^^^^^^
+KeyError: 'test_type_code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.11/threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "/app/src/pdf_app.py", line 106, in pdf_processing
+    result_json = pdf.extract_empty_result_json("Unable to process pdf file"+e)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pdf_scraper.py", line 426, in extract_empty_result_json
+    final_data_json['asset_id'] = self.input_json['asset_id']
+                                  ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'asset_id'
+intiating pdf_processing
+Extracting text from PDF...
+[pid: 1|app: 0|req: 3/3] 172.18.0.1 () {40 vars in 570 bytes} [Tue Nov 26 09:32:00 2024] POST /pdf/intiate_pdf_processing => generated 64 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 71 bytes (1 switches on core 2)
+finding relevant pages for requested test...
+Extracting Tables from PDF...
+tesseract 5.3.0
+ leptonica-1.82.0
+  libgif 5.2.1 : libjpeg 6b (libjpeg-turbo 2.1.2) : libpng 1.6.39 : libtiff 4.5.0 : zlib 1.2.13 : libwebp 1.2.4 : libopenjp2 2.5.0
+ Found AVX512BW
+ Found AVX512F
+ Found AVX512VNNI
+ Found AVX2
+ Found AVX
+ Found FMA
+ Found SSE4.1
+ Found OpenMP 201511
+ Found libarchive 3.6.2 zlib/1.2.13 liblzma/5.4.1 bz2lib/1.0.8 liblz4/1.9.4 libzstd/1.5.4
+ Found libcurl/7.88.1 OpenSSL/3.0.15 zlib/1.2.13 brotli/1.0.9 zstd/1.5.4 libidn2/2.3.3 libpsl/0.21.2 (+libidn2/2.3.3) libssh2/1.10.0 nghttp2/1.52.0 librtmp/2.3 OpenLDAP/2.5.13
+Merging text and table data
+Processing Tests...........
+Processing Tests...........Oil Testing
+Working on Oil Testing
+Creating a structure with gpt 4o based on the given data
+/app/src/pdf_scraper.py:77: LangChainDeprecationWarning: The method `BaseChatModel.predict` was deprecated in langchain-core 0.1.7 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = chat_llm.predict(text=combined_query) # Use predict() instead of chat() for ChatOpenAI
+DGA template creation...
+NEEEEEEEEEEEEEEEEEEEEEEEEXXXXXXXXXTTTTTTTTTTTTTTTTT
+Formatting Data........
+{'asset_name': 'TR-01', 'asset_id': 4, 'opp_id': 1, 'odi_id': 6, 'report_type': 'Routine', 'tag_type': 1, 'selectedTests': [{'test_status': 0, 'test_description': 'Success', 'test_type_code': 'oil_testing', 'test_type': 'Oil Testing', 'meta_data': [], 'normal_data': [{'param_name': 'MT_OIL_BREAKDOWN_VOLT_OFF', 'test_method': 'IS6792', 'value_text': '53'}, {'param_name': 'MT_OIL_DENSITY_AT_TEMP_T2_OFF', 'test_method': 'IS1448(P-16)', 'value_text': '0.863'}, {'param_name': 'MT_OIL_FLASH_POINT_OFF', 'test_method': 'IS1448(P-21)', 'value_text': '140'}, {'param_name': 'MT_OIL_TOTAL_ACID_NO', 'test_method': 'IS 1448(P-2)', 'value_text': '0.195'}, {'param_name': 'OIL_APPEARANCE', 'test_method': 'IS335', 'value_text': 'Reddish brown Color'}, {'param_name': 'OIL_SLUDGE_SEDIMENT', 'test_method': 'IS1866 (AP-A)', 'value_text': ''}, {'param_name': 'MT_OIL_TDCG_OFF', 'test_method': '', 'value_text': '106.73'}, {'param_name': 'MT_OIL_TDCG_TGC_OFF', 'test_method': '', 'value_text': '0.0253'}, {'param_name': 'MT_OIL_TGC_OFF', 'test_method': '', 'value_text': '6.5'}, {'param_name': 'MT_OIL_H2_OFF', 'test_method': '', 'value_text': '3.64'}, {'param_name': 'MT_OIL_O2_OFF', 'test_method': '', 'value_text': '12401.935'}, {'param_name': 'MT_OIL_N2_OFF', 'test_method': '', 'value_text': '51297.675'}, {'param_name': 'MT_OIL_CO_OFF', 'test_method': '', 'value_text': '89.83'}, {'param_name': 'MT_OIL_CO2_OFF', 'test_method': '', 'value_text': '1001.325'}, {'param_name': 'MT_OIL_CH4_OFF', 'test_method': '', 'value_text': '8.385'}, {'param_name': 'MT_OIL_C2H6_OFF', 'test_method': '', 'value_text': '2.275'}, {'param_name': 'MT_OIL_C2H4_OFF', 'test_method': '', 'value_text': '2.6'}, {'param_name': 'MT_OIL_C2H2_OFF', 'test_method': '', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_5_C6H6O2_OFF', 'test_method': '', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_C5H4O2_OFF', 'test_method': '', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_C5H6O2_OFF', 'test_method': '', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_C6H6O2_OFF', 'test_method': '', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_C6H6O3_OFF', 'test_method': '', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_ESTMD_DP_VALUE_OFF', 'test_method': '', 'value_text': '0.00'}, {'param_name': 'MT_OIL_FUR_TOTAL_FURAN_OFF', 'test_method': '', 'value_text': '0'}]}], 'test_status': 0, 'test_description': 'completed'}
+ERROR:root:Connection failed: [Errno 101] Network is unreachable
+*** Starting uWSGI 2.0.28 (64bit) on [Tue Nov 26 10:11:36 2024] ***
+compiled with version: 12.2.0 on 26 November 2024 07:55:41
+os: Linux-5.15.153.1-microsoft-standard-WSL2 #1 SMP Fri Mar 29 23:14:13 UTC 2024
+nodename: 8b47c5903218
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/src
+*** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:5101 fd 4
+spawned uWSGI http 1 (pid: 7)
+uwsgi socket 0 bound to TCP address 127.0.0.1:46521 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.11.10 (main, Nov 12 2024, 02:25:24) [GCC 12.2.0]
+Python main interpreter initialized at 0x7fdc8163b658
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218976 bytes (213 KB) for 4 cores
+*** Operational MODE: threaded ***
+ERROR:root:Connection failed: [Errno 101] Network is unreachable
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x7fdc8163b658 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 1, cores: 4)
+intiating pdf_processing
+Extracting text from PDF...
+[pid: 1|app: 0|req: 1/1] 172.18.0.1 () {40 vars in 570 bytes} [Tue Nov 26 10:11:43 2024] POST /pdf/intiate_pdf_processing => generated 64 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 71 bytes (1 switches on core 0)
+finding relevant pages for requested test...
+Extracting Tables from PDF...
+tesseract 5.3.0
+ leptonica-1.82.0
+  libgif 5.2.1 : libjpeg 6b (libjpeg-turbo 2.1.2) : libpng 1.6.39 : libtiff 4.5.0 : zlib 1.2.13 : libwebp 1.2.4 : libopenjp2 2.5.0
+ Found AVX512BW
+ Found AVX512F
+ Found AVX512VNNI
+ Found AVX2
+ Found AVX
+ Found FMA
+ Found SSE4.1
+ Found OpenMP 201511
+ Found libarchive 3.6.2 zlib/1.2.13 liblzma/5.4.1 bz2lib/1.0.8 liblz4/1.9.4 libzstd/1.5.4
+ Found libcurl/7.88.1 OpenSSL/3.0.15 zlib/1.2.13 brotli/1.0.9 zstd/1.5.4 libidn2/2.3.3 libpsl/0.21.2 (+libidn2/2.3.3) libssh2/1.10.0 nghttp2/1.52.0 librtmp/2.3 OpenLDAP/2.5.13
+Merging text and table data
+Processing Tests...........
+Processing Tests...........Oil Testing
+Working on Oil Testing
+Creating a structure with gpt 4o based on the given data
+/app/src/pdf_scraper.py:77: LangChainDeprecationWarning: The method `BaseChatModel.predict` was deprecated in langchain-core 0.1.7 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = chat_llm.predict(text=combined_query) # Use predict() instead of chat() for ChatOpenAI
+DGA template creation...
+NEEEEEEEEEEEEEEEEEEEEEEEEXXXXXXXXXTTTTTTTTTTTTTTTTT
+Formatting Data........
+{'asset_name': 'TR-01', 'asset_id': 4, 'opp_id': 1, 'odi_id': 6, 'report_type': 'Routine', 'tag_type': 1, 'selectedTests': [{'test_status': 0, 'test_description': 'Success', 'test_type_code': 'oil_testing', 'test_type': 'Oil Testing', 'meta_data': [{'test_method': '', 'value_text': 'TANK-1', 'paramname': 'position'}, {'test_method': '', 'value_text': 'MPS', 'paramname': 'sampledBy'}, {'test_method': 'IS 6855', 'value_text': '', 'paramname': 'samplingMethod'}, {'test_method': '', 'value_text': '', 'paramname': 'reasonOfSampling'}, {'test_method': '', 'value_text': 'SUNNY', 'paramname': 'atmosphericCondition'}], 'normal_data': [{'param_name': 'MT_AMB_HUMIDITY_OIL_TEST_OFF', 'test_method': '', 'value_text': '36'}, {'param_name': 'MT_AMB_TEMP_OIL_TEST_OFF', 'test_method': '', 'value_text': '28'}, {'param_name': 'MT_OIL_C2H2_OFF', 'test_method': '', 'value_text': '0'}, {'param_name': 'MT_OIL_C2H4_OFF', 'test_method': '', 'value_text': '2.6'}, {'param_name': 'MT_OIL_C2H6_OFF', 'test_method': '', 'value_text': '2.275'}, {'param_name': 'MT_OIL_C3H6_C3H8_OFF', 'test_method': '', 'value_text': ''}, {'param_name': 'MT_OIL_CH4_OFF', 'test_method': '', 'value_text': '8.385'}, {'param_name': 'MT_OIL_CO2_OFF', 'test_method': '', 'value_text': '1001.325'}, {'param_name': 'MT_OIL_CO_OFF', 'test_method': '', 'value_text': '89.83'}, {'param_name': 'MT_OIL_H2_OFF', 'test_method': '', 'value_text': '3.64'}, {'param_name': 'MT_OIL_MST_OFF', 'test_method': '', 'value_text': '17'}, {'param_name': 'MT_OIL_N2_OFF', 'test_method': '', 'value_text': '51297.675'}, {'param_name': 'MT_OIL_O2_OFF', 'test_method': '', 'value_text': '12401.935'}, {'param_name': 'MT_OIL_TCG_OFF', 'test_method': '', 'value_text': ''}, {'param_name': 'MT_OIL_TDCG_OFF', 'test_method': '', 'value_text': '106.73'}, {'param_name': 'MT_OIL_TDCG_TGC_OFF', 'test_method': '', 'value_text': '0.0253'}, {'param_name': 'MT_OIL_TGC_OFF', 'test_method': '', 'value_text': '6.5'}, {'param_name': 'OIL_TEMP_OFF', 'test_method': '', 'value_text': ''}, {'param_name': 'MT_CORR_SULPHUR_AT_TEMP_T1_FOR_TIME_T1_OFF', 'test_method': '', 'value_text': ''}, {'param_name': 'MT_OIL_BREAKDOWN_VOLT_OFF', 'test_method': 'IS 6792', 'value_text': '53'}, {'param_name': 'MT_OIL_DENSITY_AT_TEMP_T2_OFF', 'test_method': '', 'value_text': ''}, {'param_name': 'MT_OIL_DIE_DF_AT_27_DEG_OFF', 'test_method': 'IS 6262', 'value_text': '0.006560'}, {'param_name': 'MT_OIL_DIE_DF_AT_90_DEG_OFF', 'test_method': 'IS 6262', 'value_text': '0.05740'}, {'param_name': 'MT_OIL_FLASH_POINT_OFF', 'test_method': 'IS 1448(P-21)', 'value_text': '140'}, {'param_name': 'MT_OIL_INTERFACIAL_TENS_OFF', 'test_method': 'IS 6104', 'value_text': '14.5'}, {'param_name': 'MT_OIL_KINEMATIC_VISCOSITY_TEMP_T1_OFF', 'test_method': '', 'value_text': ''}, {'param_name': 'MT_OIL_KINEMATIC_VISCOSITY_TEMP_T2_OFF', 'test_method': '', 'value_text': ''}, {'param_name': 'MT_OIL_POUR_POINT_OFF', 'test_method': '', 'value_text': ''}, {'param_name': 'MT_OIL_RESITIVITY_AT_27_DEG_OFF', 'test_method': 'IS 6103', 'value_text': 2120000000000.0}, {'param_name': 'MT_OIL_RESITIVITY_AT_90_DEG_OFF', 'test_method': 'IS 6103', 'value_text': 246000000000.0}, {'param_name': 'MT_OIL_TOTAL_ACID_NO', 'test_method': 'IS 1448(P-2)', 'value_text': '0.195'}, {'param_name': 'OIL_APPEARANCE', 'test_method': 'IS 335', 'value_text': 'Reddish brown Color'}, {'param_name': 'OIL_SLUDGE_SEDIMENT', 'test_method': 'IS 1866 (AP-A)', 'value_text': ''}, {'param_name': 'MT_OIL_FUR_5_C6H6O2_OFF', 'test_method': 'ASTM:D5837', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_C5H4O2_OFF', 'test_method': 'ASTM:D5837', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_C5H6O2_OFF', 'test_method': 'ASTM:D5837', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_C6H6O2_OFF', 'test_method': 'ASTM:D5837', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_C6H6O3_OFF', 'test_method': 'ASTM:D5837', 'value_text': '0'}, {'param_name': 'MT_OIL_FUR_ESTMD_DP_VALUE_OFF', 'test_method': 'ASTM:D5837', 'value_text': '0.00'}, {'param_name': 'MT_OIL_FUR_TOTAL_FURAN_OFF', 'test_method': 'ASTM:D5837', 'value_text': '0'}]}], 'test_status': 0, 'test_description': 'completed'}
+ERROR:root:Connection failed: [Errno 101] Network is unreachable

@@ -1,0 +1,5 @@
+{
+    "queue_name": "aianalyticq",
+    "redis_ip":"host.docker.internal",
+    "redis_port":"6379"
+}
