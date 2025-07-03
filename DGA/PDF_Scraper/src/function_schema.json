@@ -1,0 +1,47 @@
+{
+  "function_schema": {
+    "type": "function",
+    "function": {
+      "name": "search_data_presence",
+      "description": "Analyzes a transformer test report pages to detect if actual test data sections are present for oil testing, turns ratio, and winding resistance test.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "Oil Testing": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ],
+            "description": "Respond 'Yes' only if structured data for oil testing is present; otherwise, respond 'No'."
+          },
+          "Turns Ratio": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ],
+            "description": "Respond 'Yes' only if structured data for turns ratio testing is present; otherwise, respond 'No'."
+          },
+          "Winding Resistance": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ],
+            "description": "Respond 'Yes' only if structured data for winding resistance is present; otherwise, respond 'No'."
+          },
+          "Winding Tan Delta & Capacitance": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ],
+            "description": "Respond 'Yes' only if structured data for tan delta capacitance is present; otherwise, respond 'No'."
+          }
+        },
+        "required": []
+      }
+    }
+  }
+}

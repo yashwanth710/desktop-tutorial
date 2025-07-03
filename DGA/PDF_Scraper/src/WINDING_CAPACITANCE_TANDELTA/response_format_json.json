@@ -1,0 +1,328 @@
+{
+    "autotransformer": {
+        "type": "function",
+        "function": {
+            "name": "winding_capacitance_test_data",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "UST": {
+                        "type": "object",
+                        "properties": {
+                            "HV/LV": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "LV/HV": {
+                                "$ref": "#/definitions/ReadingArray"
+                            }
+                        },
+                        "required": [
+                            "HV/LV",
+                            "LV/HV"
+                        ]
+                    },
+                    "GST-g": {
+                        "type": "object",
+                        "properties": {
+                            "HV/E": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "LV/E": {
+                                "$ref": "#/definitions/ReadingArray"
+                            }
+                        },
+                        "required": [
+                            "HV/E",
+                            "LV/E"
+                        ]
+                    },
+                    "GST": {
+                        "type": "object",
+                        "properties": {
+                            "HV/LV+E": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "LV/HV+E": {
+                                "$ref": "#/definitions/ReadingArray"
+                            }
+                        },
+                        "required": [
+                            "HV/LV+E",
+                            "LV/HV+E"
+                        ]
+                    },
+                    "Oil_Temperature": {
+                        "type": "number",
+                        "required": [
+                            "Oil_Temperature"
+                        ]
+                    }
+                },
+                "required": [
+                    "UST",
+                    "GST-g",
+                    "GST",
+                    "Oil_Temperature"
+                ],
+                "additionalProperties": false,
+                "definitions": {
+                    "ReadingArray": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "Test kV": {
+                                    "type": "number"
+                                },
+                                "Capacitance (pF)": {
+                                    "type": "number"
+                                },
+                                "Tan delta (%)": {
+                                    "type": "number"
+                                },
+                                "Power Loss (Watts)": {
+                                    "type": "number"
+                                },
+                                "Current (mA)": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "Test kV",
+                                "Capacitance (pF)",
+                                "Tan delta (%)",
+                                "Power Loss (Watts)",
+                                "Current (mA)"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "three_winding": {
+        "type": "function",
+        "function": {
+            "name": "winding_capacitance_test_data",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "HV": {
+                        "type": "object",
+                        "properties": {
+                            "UST-A": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "UST-B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "UST-A+B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST-g-A": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST-g-B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST-g-A+B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST": {
+                                "$ref": "#/definitions/ReadingArray"
+                            }
+                        },
+                        "required": [
+                            "UST-A",
+                            "UST-B",
+                            "UST-A+B",
+                            "GST-g-A",
+                            "GST-g-B",
+                            "GST-g-A+B",
+                            "GST"
+                        ]
+                    },
+                    "LV": {
+                        "type": "object",
+                        "properties": {
+                            "UST-A": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "UST-B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "UST-A+B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST-g-A": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST-g-B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST-g-A+B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST": {
+                                "$ref": "#/definitions/ReadingArray"
+                            }
+                        },
+                        "required": [
+                            "UST-A",
+                            "UST-B",
+                            "UST-A+B",
+                            "GST-g-A",
+                            "GST-g-B",
+                            "GST-g-A+B",
+                            "GST"
+                        ]
+                    },
+                    "TV": {
+                        "type": "object",
+                        "properties": {
+                            "UST-A": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "UST-B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "UST-A+B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST-g-A": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST-g-B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST-g-A+B": {
+                                "$ref": "#/definitions/ReadingArray"
+                            },
+                            "GST": {
+                                "$ref": "#/definitions/ReadingArray"
+                            }
+                        },
+                        "required": [
+                            "UST-A",
+                            "UST-B",
+                            "UST-A+B",
+                            "GST-g-A",
+                            "GST-g-B",
+                            "GST-g-A+B",
+                            "GST"
+                        ]
+                    },
+                    "Oil_Temperature": {
+                        "type": "number",
+                        "required": [
+                            "Oil_Temperature"
+                        ]
+                    }
+                },
+                "required": [
+                    "HV",
+                    "LV",
+                    "TV",
+                    "Oil_Temperature"
+                ],
+                "additionalProperties": false,
+                "definitions": {
+                    "ReadingArray": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "Test kV": {
+                                    "type": "number"
+                                },
+                                "Capacitance (pF)": {
+                                    "type": "number"
+                                },
+                                "Tan delta (%)": {
+                                    "type": "number"
+                                },
+                                "Power Loss (Watts)": {
+                                    "type": "number"
+                                },
+                                "Current (mA)": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "Test kV",
+                                "Capacitance (pF)",
+                                "Tan delta (%)",
+                                "Power Loss (Watts)",
+                                "Current (mA)"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rectifier": {
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "UST": {
+                    "$ref": "#/definitions/ReadingArray"
+                },
+                "GST": {
+                    "$ref": "#/definitions/ReadingArray"
+                },
+                "GSTg": {
+                    "$ref": "#/definitions/ReadingArray"
+                },
+                "Oil_Temperature": {
+                    "type": "number",
+                    "required": [
+                        "Oil_Temperature"
+                    ]
+                }
+            },
+            "required": [
+                "UST",
+                "GST-g",
+                "GST",
+                "Oil_Temperature"
+            ],
+            "additionalProperties": false,
+            "definitions": {
+                "ReadingArray": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "Test kV": {
+                                "type": "number"
+                            },
+                            "Capacitance (pF)": {
+                                "type": "number"
+                            },
+                            "Tan delta (%)": {
+                                "type": "number"
+                            },
+                            "Power Loss (Watts)": {
+                                "type": "number"
+                            },
+                            "Current (mA)": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "Test kV",
+                            "Capacitance (pF)",
+                            "Tan delta (%)",
+                            "Power Loss (Watts)",
+                            "Current (mA)"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,329 @@
+{
+  "type": "function",
+  "function": {
+    "name": "oil_testing",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "Ambient Humidity": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Ambient Temperature": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Acetylene (C2H2)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Ethylene (C2H4)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Ethane (C2H6)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Propylene": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Methane (CH4)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Carbon Dioxide (CO2)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Carbon Monoxide (CO)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Hydrogen (H2)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Moisture (Water Content)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Nitrogen (N2)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Oxygen (O2)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Total Dissolved Combustible Gases (TDCG)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "TDCG": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "TDCG/TGC Ratio": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Breakdown Voltage (BDV)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Density at Temperature 20C": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Dielectric Dissipation Factor at 27C": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Dielectric Dissipation Factor at 90C": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Flash Point": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Interfacial Tension (IFT)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Oil Resistivity at 27C": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Oil Resistivity at 90C": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Neutralization Value (Acidity)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Oil Appearance / Colour": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Oil Sludge & Sediment": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "5-Methyl-2-furaldehyde": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "2-Furaldehyde": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "2-Furfuryl Alcohol": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "2-Acetylfuran": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "5-Hydroxymethyl-2-furaldehyde": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Estimated DP Value (Offline)": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Total Furans": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Corrosive Sulphur at 150C for 72 hrs": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" },
+            "test_method": { "type": "string" }
+          }
+        },
+        "Position": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "string" }
+          }
+        },
+        "Sampled By": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "string" }
+          }
+        },
+        "Sampling Method": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "string" }
+          }
+        },
+        "Reason Of Sampling": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "string" }
+          }
+        },
+        "Atmospheric Condition": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "string" }
+          }
+        }
+      },
+      "required": [
+        "Ambient Humidity",
+        "Ambient Temperature",
+        "Acetylene (C2H2)",
+        "Ethylene (C2H4)",
+        "Ethane (C2H6)",
+        "Propylene",
+        "Methane (CH4)",
+        "Carbon Dioxide (CO2)",
+        "Carbon Monoxide (CO)",
+        "Hydrogen (H2)",
+        "Moisture (Water Content)",
+        "Nitrogen (N2)",
+        "Oxygen (O2)",
+        "Total Dissolved Combustible Gases (TDCG)",
+        "TDCG",
+        "TDCG/TGC Ratio",
+        "Breakdown Voltage (BDV)",
+        "Density at Temperature 20C",
+        "Dielectric Dissipation Factor at 27C",
+        "Dielectric Dissipation Factor at 90C",
+        "Flash Point",
+        "Interfacial Tension (IFT)",
+        "Oil Resistivity at 27C",
+        "Oil Resistivity at 90C",
+        "Neutralization Value (Acidity)",
+        "Oil Appearance / Colour",
+        "Oil Sludge & Sediment",
+        "5-Methyl-2-furaldehyde",
+        "2-Furaldehyde",
+        "2-Furfuryl Alcohol",
+        "2-Acetylfuran",
+        "5-Hydroxymethyl-2-furaldehyde",
+        "Estimated DP Value (Offline)",
+        "Total Furans",
+        "Corrosive Sulphur at 150C for 72 hrs",
+        "Position",
+        "Sampled By",
+        "Sampling Method",
+        "Reason Of Sampling",
+        "Atmospheric Condition"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

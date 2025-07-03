@@ -1,0 +1,95 @@
+{
+  "autotransformer": {
+  "type": "function",
+  "function": {
+    "name": "turns_ratio_test",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "HV/IV": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "TAPNO": { "type": "integer" },
+                  "CALCULATED RATIO": { "type": ["number", "null"] },
+                  "MEASURED RATIO": { "type": ["number", "null"] }
+                },
+                "required": ["TAPNO", "CALCULATED RATIO", "MEASURED RATIO"]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "TAPNO": { "type": "integer" },
+                  "CALCULATED RATIO": { "type": ["number", "null"] },
+                  "1U": { "type": ["number", "null"] },
+                  "1V": { "type": ["number", "null"] },
+                  "1W": { "type": ["number", "null"] }
+                },
+                "required": ["TAPNO", "CALCULATED RATIO", "1U", "1V", "1W"]
+              }
+            ]
+          }
+        },
+        "IV/LV": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "TAPNO": { "type": "integer" },
+                  "CALCULATED RATIO": { "type": ["number", "null"] },
+                  "MEASURED RATIO": { "type": ["number", "null"] }
+                },
+                "required": ["TAPNO", "CALCULATED RATIO", "MEASURED RATIO"]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "TAPNO": { "type": "integer" },
+                  "CALCULATED RATIO": { "type": ["number", "null"] },
+                  "2U": { "type": ["number", "null"] },
+                  "2V": { "type": ["number", "null"] },
+                  "2W": { "type": ["number", "null"] }
+                },
+                "required": ["TAPNO", "CALCULATED RATIO", "1U", "1V", "1W"]
+              }
+            ]
+          }
+        },
+        "HV/LV": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "TAPNO": { "type": "integer" },
+                  "CALCULATED RATIO": { "type": ["number", "null"] },
+                  "MEASURED RATIO": { "type": ["number", "null"] }
+                },
+                "required": ["TAPNO", "CALCULATED RATIO", "MEASURED RATIO"]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "TAPNO": { "type": "integer" },
+                  "CALCULATED RATIO": { "type": ["number", "null"] },
+                  "1U": { "type": ["number", "null"] },
+                  "1V": { "type": ["number", "null"] },
+                  "1W": { "type": ["number", "null"] }
+                },
+                "required": ["TAPNO", "CALCULATED RATIO", "1U", "1V", "1W"]
+              }
+            ]
+          }
+        }
+      },
+      "required": ["HV/IV", "IV/LV", "HV/LV"]
+    }
+  }
+}
+}
