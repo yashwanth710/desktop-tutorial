@@ -1,0 +1,14 @@
+streamlit==1.36.0
+openai==1.30.1
+qdrant-client==1.9.0
+python-dotenv==1.0.1
+PyPDF2==3.0.1
+pdf2image==1.17.0
+pytesseract==0.3.10
+pillow==10.2.0
+opencv-python==4.9.0.80
+numpy==1.26.4
+azure-identity==1.15.0
+azure-core==1.30.1
+tqdm==4.66.2
+PyMuPDF==1.24.4  # Add this as alternative PDF processor
