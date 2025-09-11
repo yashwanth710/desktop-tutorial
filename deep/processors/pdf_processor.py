@@ -1,4 +1,5 @@
 
+#----------------------------------without ASYNC----------------------------------------------------------
 # import os
 # import logging
 # from typing import List, Dict, Any
@@ -280,6 +281,9 @@
 #             st.error(f"PDF conversion error: {e}. Please install poppler-utils.")
             
 #         return chunks
+
+
+# ----------------------------------With ASYNC----------------------------------------------------------------
 
 import os
 import logging
