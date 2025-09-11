@@ -1,0 +1,70 @@
+TABLE_EXTRACTION_PROMPT: |
+  Extract and return all visible text content from the table in the image as plain text.
+  Include:
+  - All data, whether it appears in header cells, row cells, column labels, or footnotes
+  - All numbers, labels, symbols, units, and punctuation exactly as they appear
+  - Any merged cell content must be repeated in every affected row and column
+
+  Each line must be a complete, self-contained fact or data line.  
+  For example:  
+  "For Hyderabad city, temperature is 25 Celsius."  
+
+  Format each row's information on a separate line starting with "ROW:" followed by the complete description of that row's data.
+  For example:
+  "ROW: For Hyderabad city, temperature is 25 Celsius and humidity is 60 percent."
+  "ROW: For Mumbai city, temperature is 30 Celsius and humidity is 75 percent."
+  Treat every **visually aligned horizontal row** as a single logical data row, regardless of how many vertical columns or dividing lines it contains. **Do not split one visual row into multiple ROW lines, even if it includes many vertical sections.** 
+
+  DO NOT MISS ANY CONTENT THAT IS PRESENTED IN THE TABLE INCLUDING HEADERS.
+
+  Do **not**:
+  - Interpret or explain the structure of the table
+  - Mention table headers, columns, sections, or formatting
+  - Provide summaries, statistics, or layout descriptions
+
+  Only return the raw content of the table as standalone, fully expanded lines — exactly as it appears in the table.
+  If not able to extract content STRICTLY RETURN WITH "NO CONTENT EXTRACTED".
+
+TABLE_EXTRACTION_PROMPT_MODIFY: |
+  Extract all the table content from the image as plain text, making sure each row includes its column headers so it feels complete.
+  Don’t leave anything out. Only return the exact text shown in the image — no extra info or mentions of colors, fonts, or layout.
+IMAGE_EXTRACTION_PROMPT: |
+  Extract the entire visual data from the given image and describe in detail everything that appears in the image. Do not miss any detail from image.
+  Also do not mention about colours, font, kind of information. Only reply with image data and do not add anything extra.
+
+IMAGE_EXTRACTION_PROMPT_FULL: |
+  Extract all visible content from the image, including text, tables, and diagrams.
+  Describe everything in detail exactly as it appears.
+  For tables, include all rows along with their corresponding column headers, making sure each row is complete and correctly aligned with the headers.
+  If a diagram is present, provide a clear explanation of what it represents, without missing any part. add figure title for every figure if it has same.
+  Only return the content that is present in the image, without adding anything extra.
+  Do not include information about colours, fonts, logos, or footers.
+  Maintain the exact order and layout as it appears in the image, without changing the sequence.
+RAG_PROMPT: |
+  You are an AI assistant that answers user questions based strictly on the provided context and chat history.
+
+  Always follow these rules:
+  - Use only the information from the context, the chat history, or both as needed.
+  - If the chat history alone is sufficient to answer the query, answer it — even if the context is not relevant.
+  - Do not hallucinate or add any information not present in the context or chat history.
+  - If the context and chat history do not contain the answer, reply exactly:
+  "The provided context does not contain sufficient information to answer the query."
+
+
+QUERY_TRANSFORMATION_PROMPT: |
+  You are a query transformation assistant. Rewrite the latest user query using only the chat history.
+
+  Instructions:
+  Replace pronouns with the correct nouns from the chat history.
+  If the query is incomplete, use chat history to make it self-contained.
+  If the query is already clear and complete, return it unchanged.
+  DO NOT hallucinate anything.
+  if the query is different from chat history, return it unchanged. STRICTLY do not add anything EXTRA.
+
+  Chat history:
+  {chat_history}
+
+  Latest user query:
+  {latest_user_query}
+
+  Return only the final query. Do not add anything extra to it.
